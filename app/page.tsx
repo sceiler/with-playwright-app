@@ -4,7 +4,7 @@ export default function Page() {
     return (
         <div>
             <h1>Home</h1>
-            <Link href="/about">About 123 !!!</Link>
+            <Link href="/about">About</Link>
         </div>
     );
 }
