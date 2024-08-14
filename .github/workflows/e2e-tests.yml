@@ -55,9 +55,7 @@ jobs:
               with:
                   github-token: ${{secrets.GITHUB_TOKEN}}
                   script: |
-                      const fs = require('fs');
-                      const path = require('path');
-                      const prNumber = fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'pr_number.txt'), 'utf8').trim();
+                      const prNumber = '${{ github.event.number }}';
                       const { data: pullRequest } = await github.rest.pulls.get({
                         owner: context.repo.owner,
                         repo: context.repo.repo,
